@@ -1,0 +1,20 @@
+div(*ngIf="gameState=== 'not started' ").column.small-12.text-center
+  button((click)="startGame()").button Start Game
+
+div(*ngIf="gameState === 'player1' ").column.small-12.text-center
+  p Player 1 play
+  p {{player1}}
+  button((click)="choosep1()").button Choose
+  div(*ngIf="player1 != 'lezard' ")
+    button((click)="nextp1()").button Next
+
+div(*ngIf="gameState=== 'player2' ").column.small-12.text-center
+  p Player 2 play
+  p {{player2}}
+  button((click)="choosep2()").button Choose
+  div(*ngIf="player2 != 'lezard' ")
+    button((click)="nextp2()").button Next
+
+div(*ngIf="gameState=== 'end game' ").column.small-12.text-center
+  p {{result}}
+  button((click)="restart()").button Restart
