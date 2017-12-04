@@ -1,5 +1,5 @@
 downoad project
 run npm i
-run pug src
+run ng serve
 
 go to http://localhost:4200/

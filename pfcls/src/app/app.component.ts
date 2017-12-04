@@ -60,19 +60,29 @@ export class AppComponent {
     this.increment = 0;
   }
 
-  choosep2() {
-    this.gameState = 'end game';
-    this.result = this.results[this.player1][this.player2]
-  }
-
   nextp1(){
     this.increment = this.increment + 1;
     this.player1 = this.choice[this.increment];
   }
 
+  backp1(){
+    this.increment = this.increment - 1;
+    this.player1 = this.choice[this.increment];
+  }
+
+  choosep2() {
+    this.gameState = 'end game';
+    this.result = this.results[this.player1][this.player2]
+  }
+
   nextp2(){
     this.increment = this.increment + 1;
     this.player2 = this.choice[this.increment];
+  }
+
+  backp2(){
+    this.increment = this.increment - 1;
+    this.player1 = this.choice[this.increment];
   }
 
   restart() {
